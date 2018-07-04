@@ -1,5 +1,4 @@
 var gulp  = require('gulp');
-var shell = require('gulp-shell');
 
 
 /**
@@ -40,5 +39,6 @@ require('require-dir')('./gulp-tasks');
   Let's gwt the data we need and then build this sucker.
 */
 gulp.task('build', gulp.series(
-  'get:data'
+  'get:data',
+  'generate'
 ));
