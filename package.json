@@ -1,36 +1,33 @@
 {
-  "name": "EleventyOne",
-  "version": "1.0.1",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for Sass, Js, and Lambdas",
+  "name": "SSG-Data-Demo",
+  "version": "1.0.0",
+  "description": "Example project showing a data retrieval pattern",
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
     "gen": "gulp generate",
     "start": "yarn run build && yarn run serve",
-    "build": "gulp build && yarn run build:functions",
+    "build": "gulp build",
     "build:local": "gulp build:local",
-    "build:functions": "netlify-lambda build src/lambda",
-    "serve": "gulp watch & gulp serve & netlify-lambda serve src/lambda"
+    "serve": "gulp watch & gulp serve"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philhawksworth/eleventyone"
+    "url": "ssg-example-gather-data"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.4.0",
-    "concurrent-transform": "^1.0.0",
-    "gravatar": "^1.6.0",
+    "dotenv": "^6.0.0",
     "gulp": "^4.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-image-resize": "^0.13.0",
     "gulp-rename": "^1.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-serve": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.0",
-    "netlify-lambda": "^0.2.0",
-    "pump": "^3.0.0",
-    "require-dir": "^1.0.0"
+    "require-dir": "^1.0.0",
+    "rss-parser": "^3.4.2",
+    "twitter": "^1.7.1"
   }
 }
